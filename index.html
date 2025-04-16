@@ -6,6 +6,10 @@
     <meta name="description" content="Производитель триплекса в Бресте. Свое производство для фасадов и зданий, поставки в РФ и РБ. Качественная продукция для организаций, занимающихся остеклением.">
     <meta name="keywords" content="триплекс, производство триплекса, фасады, остекление, Брест, РФ, РБ, качественный триплекс">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
+    <link rel="preload" as="image" href="https://picsum.photos/seed/triplexfactory/1600/800">
 
     <!-- Шрифт и иконки -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
@@ -231,6 +235,7 @@
     <meta property="og:description" content="Наша компания предлагает высококачественный триплекс с производством в Бресте. Поставки в РФ и РБ.">
     <meta property="og:image" content="https://picsum.photos/seed/grass/1200/630">
     <meta property="og:url" content="https://bk55-sudo.github.io/triplex/">
+    <meta property="og:site_name" content="Производитель Триплекса">
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Производитель триплекса в Бресте | Качественные решения для остекления">
@@ -238,8 +243,8 @@
     <meta name="twitter:image" content="https://picsum.photos/seed/grass/1200/630">
 
     <!-- Analytics заглушки -->
-    <script>/* Google Analytics */</script>
-    <script>/* Yandex.Metrika */</script>
+    <script async>/* Google Analytics */</script>
+    <script async>/* Yandex.Metrika */</script>
 </head>
 <body>
 <header id="top" role="banner">
@@ -266,13 +271,13 @@
 
     <section id="about" class="container">
         <h2>О компании</h2>
-        <img class="section-image" src="https://picsum.photos/seed/grass/1200/300" alt="Наше производство">
+        <img class="section-image" src="https://picsum.photos/seed/grass/1200/300" alt="Наше производство" loading="lazy" width="1200" height="300">
         <p>Наша компания с собственным производством в Бресте предлагает высококачественный триплекс. Мы используем передовые технологии и строгий контроль качества.</p>
     </section>
 
     <section id="products" class="container">
         <h2>Продукция</h2>
-        <img class="section-image" src="https://picsum.photos/seed/triplex-production/1200/400" alt="Производство триплекса">
+        <img class="section-image" src="https://picsum.photos/seed/triplex-production/1200/400" alt="Производство триплекса" loading="lazy" width="1200" height="400">
         <ul>
             <li>Остекления фасадов</li>
             <li>Остекления зданий</li>
@@ -286,7 +291,7 @@
 
     <section id="advantages" class="container">
         <h2>Преимущества</h2>
-        <img class="section-image" src="https://picsum.photos/seed/triplex-pros/1200/400" alt="Преимущества продукции">
+        <img class="section-image" src="https://picsum.photos/seed/triplex-pros/1200/400" alt="Преимущества продукции" loading="lazy" width="1200" height="400">
         <div class="features">
             <div class="feature">
                 <i class="fas fa-shield-alt icon"></i><h3>Качество</h3>
@@ -325,7 +330,7 @@
             </div>
         </div>
 
-        <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+        <script defer src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
         <script>
             ymaps.ready(function () {
                 var myMap = new ymaps.Map('ymap', {
@@ -347,7 +352,7 @@
     <p>&copy; 2025 Производитель Триплекса. Все права защищены.</p>
 </footer>
 
-<script>
+<script async>
     document.getElementById('contactForm').addEventListener('submit', function(e) {
         e.preventDefault();
         alert('Сообщение отправлено!');
