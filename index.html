@@ -329,23 +329,23 @@
                 <p>Или в Telegram: <a href="https://t.me/your_telegram_bot">@your_telegram_bot</a></p>
             </div>
         </div>
-
-        <script defer src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
-        <script>
-            ymaps.ready(function () {
-                var myMap = new ymaps.Map('ymap', {
-                    center: [52.097621, 23.734472],
-                    zoom: 14,
-                    controls: ['zoomControl','fullscreenControl']
-                });
-                myMap.geoObjects.add(new ymaps.Placemark(
-                    [52.097621, 23.734472],
-                    { balloonContent: 'Наше производство в Бресте' },
-                    { preset: 'islands#icon', iconColor: '#1abc9c' }
-                ));
-            });
-        </script>
     </section>
+
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=ВАШ_API_КЛЮЧ&lang=ru_RU" type="text/javascript"></script>
+    <script>
+        ymaps.ready(function () {
+            var myMap = new ymaps.Map('ymap', {
+                center: [52.097621, 23.734472],
+                zoom: 14,
+                controls: ['zoomControl','fullscreenControl']
+            });
+            myMap.geoObjects.add(new ymaps.Placemark(
+                [52.097621, 23.734472],
+                { balloonContent: 'Наше производство в Бресте' },
+                { preset: 'islands#icon', iconColor: '#1abc9c' }
+            ));
+        });
+    </script>
 </main>
 
 <footer class="container">
