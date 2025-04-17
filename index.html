@@ -245,6 +245,8 @@
     <!-- Analytics заглушки -->
     <script async>/* Google Analytics */</script>
     <script async>/* Yandex.Metrika */</script>
+    <script src="https://unpkg.com/@yandex/ymaps3@latest/dist/browser/index.js"></script>
+    <!-- Removed default UI theme script -->
 </head>
 <body>
 <header id="top" role="banner">
@@ -331,20 +333,35 @@
         </div>
     </section>
 
-    <script src="https://api-maps.yandex.ru/2.1/?apikey=ВАШ_API_КЛЮЧ&lang=ru_RU" type="text/javascript"></script>
+    <script src="https://api-maps.yandex.ru/v3/?apikey=bb075293-7b08-4d09-b9fc-d01a22c5801d&lang=ru_RU" type="text/javascript"></script>
     <script>
-        ymaps.ready(function () {
-            var myMap = new ymaps.Map('ymap', {
-                center: [52.097621, 23.734472],
-                zoom: 14,
-                controls: ['zoomControl','fullscreenControl']
-            });
-            myMap.geoObjects.add(new ymaps.Placemark(
-                [52.097621, 23.734472],
-                { balloonContent: 'Наше производство в Бресте' },
-                { preset: 'islands#icon', iconColor: '#1abc9c' }
+        async function initMap() {
+            // Load the placemark module
+            // Wait until core API is ready
+            await ymaps3.ready;
+            const { YMap, YMapDefaultSchemeLayer, YMapDefaultFeaturesLayer, YMapMarker } = ymaps3;
+            // Initialize map
+            const map = new YMap(document.getElementById('ymap'), {
+                location: { center: [52.097621, 23.734472], zoom: 14 }
+            }, [
+                new YMapDefaultSchemeLayer(),
+                new YMapDefaultFeaturesLayer()
+            ]);
+            // Create a custom HTML marker
+            const markerElement = document.createElement('div');
+            markerElement.style.width = '20px';
+            markerElement.style.height = '20px';
+            markerElement.style.backgroundColor = '#1abc9c';
+            markerElement.style.borderRadius = '50%';
+            markerElement.style.boxShadow = '0 0 2px rgba(0,0,0,0.5)';
+            // Add the custom marker to the map
+            map.addChild(new YMapMarker(
+                { coordinates: [52.097621, 23.734472] },
+                markerElement
             ));
-        });
+        }
+        // Run initialization
+        initMap();
     </script>
 </main>
 
