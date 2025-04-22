@@ -1,0 +1,31 @@
+name: 🖼️ Process Images
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build-images:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run image processing
+        run: node scripts/process-images.js
+
+      - name: Commit optimized images
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add public/images
+          git commit -m "ci: update processed images [skip ci]" || echo "No changes"
+          git push

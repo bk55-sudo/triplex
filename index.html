@@ -1,380 +1,53 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <title>Производитель триплекса в Бресте | Качественные решения для остекления</title>
-    <meta name="description" content="Производитель триплекса в Бресте. Свое производство для фасадов и зданий, поставки в РФ и РБ. Качественная продукция для организаций, занимающихся остеклением.">
-    <meta name="keywords" content="триплекс, производство триплекса, фасады, остекление, Брест, РФ, РБ, качественный триплекс">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
-    <link rel="preload" as="image" href="https://picsum.photos/seed/triplexfactory/1600/800">
-
-    <!-- Шрифт и иконки -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-
-    <!-- Стили -->
-    <style>
-        :root {
-            --primary-color: #2c3e50;
-            --secondary-color: #3498db;
-            --accent-color: #e74c3c;
-            --background-color: #ecf0f1;
-            --text-color: #333;
-            --header-bg: linear-gradient(90deg, #0f4c81, #3498db);
-        }
-        body {
-            font-family: 'Montserrat', sans-serif;
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-            background-color: var(--background-color);
-            color: var(--text-color);
-        }
-
-        /* Header */
-        header {
-            background: var(--header-bg);
-            color: #fff;
-            text-align: center;
-            padding: 40px 20px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-        }
-        nav a {
-            margin: 0 15px;
-            text-decoration: none;
-            color: #fff;
-            font-weight: bold;
-            transition: color 0.3s ease;
-        }
-        nav a:hover {
-            color: var(--secondary-color);
-        }
-
-        /* Hero Section */
-        .hero {
-            position: relative;
-            background: url('https://picsum.photos/seed/triplexfactory/1600/800') no-repeat center center/cover;
-            background-attachment: fixed;
-            min-height: 60vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .hero::before {
-            content: "";
-            position: absolute;
-            inset: 0;
-            background: rgba(0,0,0,0.4);
-        }
-        .hero .container {
-            position: relative;
-            z-index: 2;
-            text-align: center;
-            color: #fff;
-        }
-        .hero h2 {
-            font-size: 2.8rem;
-            margin-bottom: 10px;
-        }
-        .hero p {
-            font-size: 1.2rem;
-        }
-        .hero .btn {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 12px 24px;
-            background: var(--secondary-color);
-            color: #fff;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 6px;
-            transition: background 0.3s ease;
-        }
-        .hero .btn:hover {
-            background: var(--accent-color);
-        }
-
-        /* Container */
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        /* Sections */
-        section {
-            padding: 30px 20px;
-        }
-
-        /* Features and Contact Boxes */
-        .features, .contact {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 15px;
-        }
-        .feature, .contact-box {
-            background: #fff;
-            border-radius: 8px;
-            padding: 15px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .feature:hover, .contact-box:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-        }
-
-        /* Form Styling */
-        form {
-            display: flex;
-            flex-direction: column;
-        }
-        form input, form textarea {
-            padding: 12px;
-            margin-bottom: 15px;
-            border: 1px solid #ddd;
-            border-radius: 6px;
-            font-size: 1rem;
-        }
-        form input:focus, form textarea:focus {
-            border-color: var(--secondary-color);
-            outline: none;
-        }
-        form button {
-            padding: 12px;
-            background: var(--secondary-color);
-            color: #fff;
-            border: none;
-            border-radius: 6px;
-            font-size: 1rem;
-            cursor: pointer;
-            transition: background 0.3s ease;
-        }
-        form button:hover {
-            background: var(--accent-color);
-        }
-
-        /* Icons */
-        .icon {
-            margin-right: 10px;
-            color: var(--secondary-color);
-        }
-
-        /* Section Images */
-        .section-image {
-            width: 100%;
-            max-height: 300px;
-            object-fit: cover;
-            border-radius: 8px;
-            margin-bottom: 20px;
-        }
-
-        /* Responsive */
-        @media (max-width: 1440px) {
-            .container { max-width: 1100px; }
-            .hero h2 { font-size: 2.6rem; }
-            .hero p { font-size: 1.1rem; }
-        }
-        @media (max-width: 1200px) {
-            .hero h2 { font-size: 2.4rem; }
-            .hero p { font-size: 1.1rem; }
-        }
-        @media (max-width: 992px) {
-            nav a { margin: 0 10px; font-size: 0.9rem; }
-            .hero { min-height: 60vh; }
-        }
-        @media (max-width: 768px) {
-            header { padding: 20px 10px; }
-            nav { display: flex; flex-direction: column; align-items: center; }
-            nav a { margin: 8px 0; }
-            .hero h2 { font-size: 2rem; }
-            .hero p { font-size: 1rem; }
-            section { padding: 30px 10px; }
-            .hero { background-attachment: scroll; }
-        }
-        @media (max-width: 576px) {
-            .features, .contact { grid-template-columns: 1fr; }
-            .hero h2 { font-size: 1.8rem; }
-            .hero p { font-size: 0.9rem; }
-        }
-    </style>
-
-    <!-- Микроразметка JSON-LD -->
-    <script type="application/ld+json">
-        {
-            "@context": "http://schema.org",
-            "@type": "Organization",
-            "name": "Производитель Триплекса",
-            "url": "https://bk55-sudo.github.io/triplex/",
-            "logo": "https://bk55-sudo.github.io/triplex/logo.png",
-            "contactPoint": {
-                "@type": "ContactPoint",
-                "telephone": "+375-XX-XXX-XX-XX",
-                "contactType": "customer service"
-            },
-            "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "Улица Примерная, дом 1",
-                "addressLocality": "Брест",
-                "addressCountry": "BY"
-            },
-            "geo": {
-                "@type": "GeoCoordinates",
-                "latitude": 52.097621,
-                "longitude": 23.734472
-            },
-            "hasMap": "https://yandex.ru/maps/?ll=23.734472%2C52.097621&z=14"
-        }
-    </script>
-    <!-- Open Graph -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Производитель триплекса в Бресте | Качественные решения для остекления">
-    <meta property="og:description" content="Наша компания предлагает высококачественный триплекс с производством в Бресте. Поставки в РФ и РБ.">
-    <meta property="og:image" content="https://picsum.photos/seed/grass/1200/630">
-    <meta property="og:url" content="https://bk55-sudo.github.io/triplex/">
-    <meta property="og:site_name" content="Производитель Триплекса">
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Производитель триплекса в Бресте | Качественные решения для остекления">
-    <meta name="twitter:description" content="Наша компания предлагает высококачественный триплекс с производством в Бресте. Поставки в РФ и РБ.">
-    <meta name="twitter:image" content="https://picsum.photos/seed/grass/1200/630">
-
-    <!-- Analytics заглушки -->
-    <script async>/* Google Analytics */</script>
-    <script async>/* Yandex.Metrika */</script>
-    <script src="https://unpkg.com/@yandex/ymaps3@latest/dist/browser/index.js"></script>
-    <!-- Removed default UI theme script -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Промышленный триплекс и архитектурное стекло – поставки по Беларуси и России | Triplex</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <meta name="description" content="Поставка промышленного триплекса и архитектурного стекла в промышленных масштабах по Беларуси и России." />
+  <meta name="keywords" content="триплекс, архитектурное стекло, промышленное стекло, Беларусь, Россия, оптовые поставки" />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://triplex.by/" />
+  <meta property="og:title" content="Триплекс и архитектурное стекло – поставки по Беларуси и России" />
+  <meta property="og:description" content="Крупномасштабные поставки промышленного триплекса и архитектурного стекла в Беларуси и России. Высокое качество, современные технологии." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://triplex.by/" />
+  <meta property="og:locale" content="ru_RU" />
+  <meta property="og:locale:alternate" content="ru_BY" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Триплекс и архитектурное стекло – поставки по Беларуси и России" />
+  <meta name="twitter:description" content="Крупномасштабные поставки промышленного триплекса и архитектурного стекла в Беларуси и России. Высокое качество, современные технологии." />
 </head>
-<body>
-<header id="top" role="banner">
-    <div class="container">
-        <h1>Производитель Триплекса</h1>
-        <p>Качественное остекление для фасадов и зданий.</p>
-        <nav role="navigation" aria-label="Основная навигация">
-            <a href="#about">О компании</a>
-            <a href="#products">Продукция</a>
-            <a href="#advantages">Преимущества</a>
-            <a href="#contact">Контакты</a>
-        </nav>
-    </div>
-</header>
+<body class="bg-[url('hero2.jpg')] bg-cover bg-center flex items-center justify-center min-h-screen">
+<div class="max-w-lg w-full text-center p-8 rounded-lg shadow-lg bg-black bg-opacity-60 text-white" itemscope itemtype="https://schema.org/Organization">
+  <h1 class="text-5xl font-extrabold mb-4">
+    <span itemprop="name">Triplex</span>
+  </h1>
 
-<main role="main">
-    <section class="hero">
-        <div class="container">
-            <h2>Современные технологии производства триплекса</h2>
-            <p>Лидер в остеклении фасадов и зданий с поставками в РФ и РБ.</p>
-            <a href="#contact" class="btn">Свяжитесь с нами</a>
-        </div>
-    </section>
+  <p class="text-lg mb-6">
+      <span itemprop="description">
+        Промышленный триплекс и архитектурное стекло.
+        Мы соответствуем самым высоким стандартам и используем современное оборудование.
+        Скоро, с обновленным сайтом.
+      </span>
+  </p>
 
-    <section id="about" class="container">
-        <h2>О компании</h2>
-        <img class="section-image" src="https://picsum.photos/seed/grass/1200/300" alt="Наше производство" loading="lazy" width="1200" height="300">
-        <p>Наша компания с собственным производством в Бресте предлагает высококачественный триплекс. Мы используем передовые технологии и строгий контроль качества.</p>
-    </section>
-
-    <section id="products" class="container">
-        <h2>Продукция</h2>
-        <img class="section-image" src="https://picsum.photos/seed/triplex-production/1200/400" alt="Производство триплекса" loading="lazy" width="1200" height="400">
-        <ul>
-            <li>Остекления фасадов</li>
-            <li>Остекления зданий</li>
-            <li>Архитектурных проектов</li>
-            <li>Стеклянные дверные панели</li>
-            <li>Безрамное остекление балконов</li>
-            <li>Дизайнерские стеклянные перегородки</li>
-            <li>Витражные конструкции</li>
-        </ul>
-    </section>
-
-    <section id="advantages" class="container">
-        <h2>Преимущества</h2>
-        <img class="section-image" src="https://picsum.photos/seed/triplex-pros/1200/400" alt="Преимущества продукции" loading="lazy" width="1200" height="400">
-        <div class="features">
-            <div class="feature">
-                <i class="fas fa-shield-alt icon"></i><h3>Качество</h3>
-                <p>Соответствие международным стандартам.</p>
-            </div>
-            <div class="feature">
-                <i class="fas fa-cogs icon"></i><h3>Надежность</h3>
-                <p>Полный контроль на всех этапах производства.</p>
-            </div>
-            <div class="feature">
-                <i class="fas fa-lightbulb icon"></i><h3>Инновации</h3>
-                <p>Передовые методы и оборудование.</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" class="container">
-        <h2>Контакты</h2>
-        <div class="contact">
-            <div class="contact-box">
-                <h3>Наш адрес</h3>
-                <p><a href="https://yandex.ru/maps/?ll=23.734472%2C52.097621&z=14" target="_blank" rel="noopener noreferrer">Улица Примерная, дом 1, Брест, BY</a></p>
-                <p>Телефон: <a href="tel:+375XXXXXXXXX">+375-XX-XXX-XX-XX</a></p>
-                <p>Email: <a href="mailto:info@example.com">info@example.com</a></p>
-                <div id="ymap" style="width:100%; height:200px; margin-top:15px;" aria-label="Карта: Наше производство в Бресте"></div>
-            </div>
-            <div class="contact-box">
-                <h3>Обратная связь</h3>
-                <form id="contactForm">
-                    <input type="text" placeholder="Ваше имя" required>
-                    <input type="email" placeholder="Ваш email" required>
-                    <textarea rows="4" placeholder="Ваше сообщение" required></textarea>
-                    <button type="submit">Отправить</button>
-                </form>
-                <p>Или в Telegram: <a href="https://t.me/your_telegram_bot">@your_telegram_bot</a></p>
-            </div>
-        </div>
-    </section>
-
-    <script src="https://api-maps.yandex.ru/v3/?apikey=bb075293-7b08-4d09-b9fc-d01a22c5801d&lang=ru_RU" type="text/javascript"></script>
-    <script>
-        async function initMap() {
-            // Load the placemark module
-            // Wait until core API is ready
-            await ymaps3.ready;
-            const { YMap, YMapDefaultSchemeLayer, YMapDefaultFeaturesLayer, YMapMarker } = ymaps3;
-            // Initialize map
-            const map = new YMap(document.getElementById('ymap'), {
-                location: { center: [52.097621, 23.734472], zoom: 14 }
-            }, [
-                new YMapDefaultSchemeLayer(),
-                new YMapDefaultFeaturesLayer()
-            ]);
-            // Create a custom HTML marker
-            const markerElement = document.createElement('div');
-            markerElement.style.width = '20px';
-            markerElement.style.height = '20px';
-            markerElement.style.backgroundColor = '#1abc9c';
-            markerElement.style.borderRadius = '50%';
-            markerElement.style.boxShadow = '0 0 2px rgba(0,0,0,0.5)';
-            // Add the custom marker to the map
-            map.addChild(new YMapMarker(
-                { coordinates: [52.097621, 23.734472] },
-                markerElement
-            ));
-        }
-        // Run initialization
-        initMap();
-    </script>
-</main>
-
-<footer class="container">
-    <p>&copy; 2025 Производитель Триплекса. Все права защищены.</p>
-</footer>
-
-<script async>
-    document.getElementById('contactForm').addEventListener('submit', function(e) {
-        e.preventDefault();
-        alert('Сообщение отправлено!');
-        this.reset();
-    });
-</script>
+</p>
+  <p class="text-sm">
+    Свяжитесь с нами:
+    <a
+            href="tel:+375292061830"
+            itemprop="telephone"
+            class="underline hover:text-gray-200"
+    >
+      +375 (29) 206‑18‑30
+    </a>
+  </p>
+  <meta itemprop="areaServed" content="Беларусь" />
+  <meta itemprop="areaServed" content="Россия" />
+  <meta itemprop="serviceOffered" content="Промышленный триплекс" />
+  <meta itemprop="serviceOffered" content="Архитектурное стекло" />
+</div>
 </body>
 </html>
